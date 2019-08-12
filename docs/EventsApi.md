@@ -1,6 +1,6 @@
 # clever.EventsApi
 
-All URIs are relative to *https://api.clever.com/v2.0*
+All URIs are relative to *https://api.clever.com/v2.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Returns the specific event
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -31,7 +31,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.EventsApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_event(id)
     pprint(api_response)
 except ApiException as e:
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 Returns a list of events
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -86,7 +86,7 @@ ending_before = 'ending_before_example' # str |  (optional)
 school = 'school_example' # str |  (optional)
 record_type = ['record_type_example'] # list[str] |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_events(limit=limit, starting_after=starting_after, ending_before=ending_before, school=school, record_type=record_type)
     pprint(api_response)
 except ApiException as e:

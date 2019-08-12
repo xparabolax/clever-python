@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **course** | **str** |  | [optional] 
 **created** | **str** |  | [optional] 
 **district** | **str** |  | [optional] 
+**ext** | **object** |  | [optional] 
 **grade** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_modified** | **str** |  | [optional] 

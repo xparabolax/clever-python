@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**district** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **number** | **str** |  | [optional] 

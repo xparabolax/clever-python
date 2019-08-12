@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **dob** | **str** |  | [optional] 
 **ell_status** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
+**enrollments** | [**list[SchoolEnrollment]**](SchoolEnrollment.md) |  | [optional] 
+**ext** | **object** |  | [optional] 
 **gender** | **str** |  | [optional] 
 **grade** | **str** |  | [optional] 
 **graduation_year** | **str** |  | [optional] 

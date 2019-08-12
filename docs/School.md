@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **str** |  | [optional] 
 **district** | **str** |  | [optional] 
+**ext** | **object** |  | [optional] 
 **high_grade** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_modified** | **str** |  | [optional] 

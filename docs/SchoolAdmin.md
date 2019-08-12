@@ -4,8 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **credentials** | [**Credentials**](Credentials.md) |  | [optional] 
+**department** | **str** |  | [optional] 
 **district** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
+**ext** | **object** |  | [optional] 
 **id** | **str** |  | [optional] 
 **name** | [**Name**](Name.md) |  | [optional] 
 **schools** | **list[str]** |  | [optional] 

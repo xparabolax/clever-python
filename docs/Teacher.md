@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **credentials** | [**Credentials**](Credentials.md) |  | [optional] 
 **district** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
+**ext** | **object** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_modified** | **str** |  | [optional] 
 **name** | [**Name**](Name.md) |  | [optional] 

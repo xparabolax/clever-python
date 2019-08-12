@@ -1,6 +1,6 @@
 # clever.DataApi
 
-All URIs are relative to *https://api.clever.com/v2.0*
+All URIs are relative to *https://api.clever.com/v2.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -64,7 +64,7 @@ Method | HTTP request | Description
 
 Returns a specific student contact
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -80,7 +80,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_contact(id)
     pprint(api_response)
 except ApiException as e:
@@ -109,13 +109,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_contacts**
-> ContactsResponse get_contacts(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> ContactsResponse get_contacts(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of student contacts
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -132,9 +132,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_contacts(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_contacts(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_contacts: %s\n" % e)
@@ -147,6 +148,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -170,7 +172,7 @@ Name | Type | Description  | Notes
 
 Returns the contacts for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -189,7 +191,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_contacts_for_student(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -227,7 +229,7 @@ Name | Type | Description  | Notes
 
 Returns a specific course
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -243,7 +245,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_course(id)
     pprint(api_response)
 except ApiException as e:
@@ -278,7 +280,7 @@ Name | Type | Description  | Notes
 
 Returns the course for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -294,7 +296,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_course_for_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -323,13 +325,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_courses**
-> CoursesResponse get_courses(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> CoursesResponse get_courses(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of courses
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -346,9 +348,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_courses(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_courses(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_courses: %s\n" % e)
@@ -361,6 +364,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -384,7 +388,7 @@ Name | Type | Description  | Notes
 
 Returns a specific district
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -400,7 +404,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district(id)
     pprint(api_response)
 except ApiException as e:
@@ -435,7 +439,7 @@ Name | Type | Description  | Notes
 
 Returns a specific district admin
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -451,7 +455,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_admin(id)
     pprint(api_response)
 except ApiException as e:
@@ -480,13 +484,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_district_admins**
-> DistrictAdminsResponse get_district_admins(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> DistrictAdminsResponse get_district_admins(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of district admins
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -503,9 +507,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_district_admins(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_district_admins(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_district_admins: %s\n" % e)
@@ -518,6 +523,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -541,7 +547,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a student contact
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -557,7 +563,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_contact(id)
     pprint(api_response)
 except ApiException as e:
@@ -592,7 +598,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a course
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -608,7 +614,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_course(id)
     pprint(api_response)
 except ApiException as e:
@@ -643,7 +649,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a district admin
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -659,7 +665,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_district_admin(id)
     pprint(api_response)
 except ApiException as e:
@@ -694,7 +700,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a school
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -710,7 +716,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_school(id)
     pprint(api_response)
 except ApiException as e:
@@ -745,7 +751,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a school admin
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -761,7 +767,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_school_admin(id)
     pprint(api_response)
 except ApiException as e:
@@ -796,7 +802,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -812,7 +818,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -847,7 +853,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -863,7 +869,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_student(id)
     pprint(api_response)
 except ApiException as e:
@@ -898,7 +904,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a teacher
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -914,7 +920,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_teacher(id)
     pprint(api_response)
 except ApiException as e:
@@ -949,7 +955,7 @@ Name | Type | Description  | Notes
 
 Returns the district for a term
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -965,7 +971,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_district_for_term(id)
     pprint(api_response)
 except ApiException as e:
@@ -994,13 +1000,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_districts**
-> DistrictsResponse get_districts()
+> DistrictsResponse get_districts(count=count)
 
 
 
 Returns a list of districts
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1014,16 +1020,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = clever.DataApi(clever.ApiClient(configuration))
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_districts()
+try:
+    api_response = api_instance.get_districts(count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_districts: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -1047,7 +1057,7 @@ This endpoint does not need any parameter.
 
 Returns a specific school
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1063,7 +1073,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_school(id)
     pprint(api_response)
 except ApiException as e:
@@ -1098,7 +1108,7 @@ Name | Type | Description  | Notes
 
 Returns a specific school admin
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1114,7 +1124,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_school_admin(id)
     pprint(api_response)
 except ApiException as e:
@@ -1143,13 +1153,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_school_admins**
-> SchoolAdminsResponse get_school_admins(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> SchoolAdminsResponse get_school_admins(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of school admins
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1166,9 +1176,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_school_admins(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_school_admins(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_school_admins: %s\n" % e)
@@ -1181,6 +1192,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -1204,7 +1216,7 @@ Name | Type | Description  | Notes
 
 Returns the school for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1220,7 +1232,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_school_for_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -1255,7 +1267,7 @@ Name | Type | Description  | Notes
 
 Returns the primary school for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1271,7 +1283,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_school_for_student(id)
     pprint(api_response)
 except ApiException as e:
@@ -1306,7 +1318,7 @@ Name | Type | Description  | Notes
 
 Retrieves school info for a teacher.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1322,7 +1334,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_school_for_teacher(id)
     pprint(api_response)
 except ApiException as e:
@@ -1351,13 +1363,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_schools**
-> SchoolsResponse get_schools(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> SchoolsResponse get_schools(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of schools
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1374,9 +1386,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_schools(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_schools(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_schools: %s\n" % e)
@@ -1389,6 +1402,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -1412,7 +1426,7 @@ Name | Type | Description  | Notes
 
 Returns the schools for a school admin
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1431,7 +1445,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_schools_for_school_admin(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1469,7 +1483,7 @@ Name | Type | Description  | Notes
 
 Returns the schools for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1488,7 +1502,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_schools_for_student(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1526,7 +1540,7 @@ Name | Type | Description  | Notes
 
 Returns the schools for a teacher
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1545,7 +1559,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_schools_for_teacher(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1583,7 +1597,7 @@ Name | Type | Description  | Notes
 
 Returns a specific section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1599,7 +1613,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -1628,13 +1642,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_sections**
-> SectionsResponse get_sections(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> SectionsResponse get_sections(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of sections
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1651,9 +1665,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_sections(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_sections(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_sections: %s\n" % e)
@@ -1666,6 +1681,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -1689,7 +1705,7 @@ Name | Type | Description  | Notes
 
 Returns the sections for a Courses
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1708,7 +1724,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_sections_for_course(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1746,7 +1762,7 @@ Name | Type | Description  | Notes
 
 Returns the sections for a school
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1765,7 +1781,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_sections_for_school(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1803,7 +1819,7 @@ Name | Type | Description  | Notes
 
 Returns the sections for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1822,7 +1838,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_sections_for_student(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1860,7 +1876,7 @@ Name | Type | Description  | Notes
 
 Returns the sections for a teacher
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1879,7 +1895,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_sections_for_teacher(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1917,7 +1933,7 @@ Name | Type | Description  | Notes
 
 Returns the sections for a term
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1936,7 +1952,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_sections_for_term(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -1974,7 +1990,7 @@ Name | Type | Description  | Notes
 
 Returns a specific student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1990,7 +2006,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_student(id)
     pprint(api_response)
 except ApiException as e:
@@ -2019,13 +2035,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_students**
-> StudentsResponse get_students(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> StudentsResponse get_students(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of students
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2042,9 +2058,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_students(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_students(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_students: %s\n" % e)
@@ -2057,6 +2074,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -2080,7 +2098,7 @@ Name | Type | Description  | Notes
 
 Returns the students for a student contact
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2099,7 +2117,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_students_for_contact(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2137,7 +2155,7 @@ Name | Type | Description  | Notes
 
 Returns the students for a school
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2156,7 +2174,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_students_for_school(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2194,7 +2212,7 @@ Name | Type | Description  | Notes
 
 Returns the students for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2213,7 +2231,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_students_for_section(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2251,7 +2269,7 @@ Name | Type | Description  | Notes
 
 Returns the students for a teacher
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2270,7 +2288,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_students_for_teacher(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2308,7 +2326,7 @@ Name | Type | Description  | Notes
 
 Returns a specific teacher
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2324,7 +2342,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_teacher(id)
     pprint(api_response)
 except ApiException as e:
@@ -2359,7 +2377,7 @@ Name | Type | Description  | Notes
 
 Returns the primary teacher for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2375,7 +2393,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_teacher_for_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -2404,13 +2422,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_teachers**
-> TeachersResponse get_teachers(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> TeachersResponse get_teachers(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of teachers
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2427,9 +2445,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_teachers(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_teachers(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_teachers: %s\n" % e)
@@ -2442,6 +2461,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
@@ -2465,7 +2485,7 @@ Name | Type | Description  | Notes
 
 Returns the teachers for a school
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2484,7 +2504,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_teachers_for_school(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2522,7 +2542,7 @@ Name | Type | Description  | Notes
 
 Returns the teachers for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2541,7 +2561,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_teachers_for_section(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2579,7 +2599,7 @@ Name | Type | Description  | Notes
 
 Returns the teachers for a student
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2598,7 +2618,7 @@ limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
 
-try: 
+try:
     api_response = api_instance.get_teachers_for_student(id, limit=limit, starting_after=starting_after, ending_before=ending_before)
     pprint(api_response)
 except ApiException as e:
@@ -2636,7 +2656,7 @@ Name | Type | Description  | Notes
 
 Returns a specific term
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2652,7 +2672,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_term(id)
     pprint(api_response)
 except ApiException as e:
@@ -2687,7 +2707,7 @@ Name | Type | Description  | Notes
 
 Returns the term for a section
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2703,7 +2723,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = clever.DataApi(clever.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_term_for_section(id)
     pprint(api_response)
 except ApiException as e:
@@ -2732,13 +2752,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **get_terms**
-> TermsResponse get_terms(limit=limit, starting_after=starting_after, ending_before=ending_before)
+> TermsResponse get_terms(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
 
 
 
 Returns a list of terms
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2755,9 +2775,10 @@ api_instance = clever.DataApi(clever.ApiClient(configuration))
 limit = 56 # int |  (optional)
 starting_after = 'starting_after_example' # str |  (optional)
 ending_before = 'ending_before_example' # str |  (optional)
+count = 'count_example' # str |  (optional)
 
-try: 
-    api_response = api_instance.get_terms(limit=limit, starting_after=starting_after, ending_before=ending_before)
+try:
+    api_response = api_instance.get_terms(limit=limit, starting_after=starting_after, ending_before=ending_before, count=count)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataApi->get_terms: %s\n" % e)
@@ -2770,6 +2791,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **starting_after** | **str**|  | [optional] 
  **ending_before** | **str**|  | [optional] 
+ **count** | **str**|  | [optional] 
 
 ### Return type
 
