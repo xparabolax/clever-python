@@ -31,23 +31,47 @@ class TermsCreated(event.Event):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'data': 'TermObject'
     }
 
     attribute_map = {
+        'type': 'type',
         'data': 'data'
     }
 
-    def __init__(self, data=None):
+    def __init__(self, type=None, data=None):
         """
         TermsCreated - a model defined in Swagger
         """
 
+        self._type = None
         self._data = None
         self.discriminator = None
 
+        if type is not None:
+            self.type = type
         if data is not None:
-          self.data = data
+            self.data = data
+    
+    @property
+    def type(self):
+        """Gets the type of this TermsCreated.
+
+        :return: The type of this TermsCreated.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this TermsCreated.
+
+        :param type: The type of this TermsCreated.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def data(self):

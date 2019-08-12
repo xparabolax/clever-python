@@ -282,12 +282,12 @@ class ApiClient(object):
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
                  body=None, post_params=None, files=None,
-                 response_type=None, auth_settings=None, async=None,
+                 response_type=None, auth_settings=None, async_req=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
-        To make an async request, set the async parameter.
+        To make an async request, set the async_req parameter.
 
         :param resource_path: Path to method endpoint.
         :param method: Method to call.
@@ -302,7 +302,7 @@ class ApiClient(object):
         :param response: Response data type.
         :param files dict: key -> filename, value -> filepath,
             for `multipart/form-data`.
-        :param async bool: execute request asynchronously
+        :param async_req bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code and headers
         :param collection_formats: dict of collection formats for path, query,
             header, and post parameters.

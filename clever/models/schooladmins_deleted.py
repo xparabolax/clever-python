@@ -31,23 +31,47 @@ class SchooladminsDeleted(event.Event):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'data': 'SchoolAdminObject'
     }
 
     attribute_map = {
+        'type': 'type',
         'data': 'data'
     }
 
-    def __init__(self, data=None):
+    def __init__(self, type=None, data=None):
         """
         SchooladminsDeleted - a model defined in Swagger
         """
 
+        self._type = None
         self._data = None
         self.discriminator = None
 
+        if type is not None:
+            self.type = type
         if data is not None:
-          self.data = data
+            self.data = data
+    
+    @property
+    def type(self):
+        """Gets the type of this SchooladminsDeleted.
+
+        :return: The type of this SchooladminsDeleted.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this SchooladminsDeleted.
+
+        :param type: The type of this SchooladminsDeleted.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def data(self):

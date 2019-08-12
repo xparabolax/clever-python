@@ -31,23 +31,47 @@ class CoursesCreated(event.Event):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'data': 'CourseObject'
     }
 
     attribute_map = {
+        'type': 'type',
         'data': 'data'
     }
 
-    def __init__(self, data=None):
+    def __init__(self, type=None, data=None):
         """
         CoursesCreated - a model defined in Swagger
         """
 
+        self._type = None
         self._data = None
         self.discriminator = None
 
+        if type is not None:
+            self.type = type
         if data is not None:
-          self.data = data
+            self.data = data
+    
+    @property
+    def type(self):
+        """Gets the type of this CoursesCreated.
+
+        :return: The type of this CoursesCreated.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this CoursesCreated.
+
+        :param type: The type of this CoursesCreated.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def data(self):
