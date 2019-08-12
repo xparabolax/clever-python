@@ -311,13 +311,13 @@ class ApiClient(object):
         :param _request_timeout: timeout setting for this request. If one number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of (connection, read) timeouts.
         :return:
-            If async parameter is True,
+            If async_req parameter is True,
             the request will be called asynchronously.
             The method will return the request thread.
-            If parameter async is False or missing,
+            If parameter async_req is False or missing,
             then the method will return the response directly.
         """
-        if not async:
+        if not async_req:
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
                                    body, post_params, files,
